@@ -3,10 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ProfileInfoComponent } from './profile-info/profile-info.component';
+import { PersonCardComponent } from './person-card/person-card.component';
+import { WelcomeMessageComponent } from './welcome-message/welcome-message.component';
+import { PeopleListComponent } from './people-list/people-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProfileInfoComponent,
+    PersonCardComponent,
+    WelcomeMessageComponent,
+    PeopleListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,4 @@
+<div class="welcome-message">
+    <p *ngIf="isClicked">Wlecome to Friend Tracker, {{ name }} </p>
+    <button (click)="onHide()" [innerText]="isClicked ? 'Hide':'Show'"></button>
+</div>

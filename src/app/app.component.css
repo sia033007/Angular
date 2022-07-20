@@ -1,0 +1,9 @@
+.border-container{
+    margin:auto;
+    border: solid 5px #aaab;
+}
+.scroll-container{
+    margin: auto;
+    scroll-behavior: smooth;
+
+}
