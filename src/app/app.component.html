@@ -1,12 +1,10 @@
-<h1 class="container">
+<div class="container">
   <p>You currently have {{ favoritesIds.length }} favorites</p>
   <app-welcome-message [name]="person[0].name"></app-welcome-message>
-</h1>
-<div class="row justify-content-center align-items-center ms-4 container">
-  <div class="col-sm-4 text-center" *ngFor="let p of person">
-    <app-profile-info
-    [isFavorite]="favoritesIds.includes(p.id)"
-    [person]="p"
-    (selectEvent)="favoriteHandler($event)"></app-profile-info>
+  <div class="row w-100 justify-content-center align-items-center ms-4 container">
+   
+      <h2>Favorites</h2> <p>Number of Favorites : {{ favorites.length }}</p>
+      <app-people-list (personClicked)="favoriteHandler($event)" [people]="favorites"></app-people-list> <br>
+<h2>Friends</h2> <p>Number of nonFavorites : {{ nonFavorites.length }}</p>
+<app-people-list (personClicked)="favoriteHandler($event)" [people]="nonFavorites"></app-people-list>
   </div>
-</div>

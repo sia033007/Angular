@@ -1,5 +1,5 @@
-<div (click)="isClicked()" class="card h-100 text-center" style="height:10rem;cursor: pointer;">
-    <div class="card-header" [ngClass]="cardClass">
+<div (click)="isClicked()" class="card text-center" style="cursor: pointer;">
+    <div class="card-header add-favorite">
       <img [src]="person.imageUrl" class="img-fluid img-thumbnail rounded-circle" />
 
     </div>
@@ -14,7 +14,6 @@
 
     </div>
     <div class="card-footer bg-secondary">
-      <p *ngIf="isFavorite" style="font-size:10px">Favorited!</p>
     </div>
 
   </div>

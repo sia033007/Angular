@@ -8,11 +8,7 @@ import { Person } from 'src/types';
 })
 export class ProfileInfoComponent implements OnInit {
   @Input() person! : Person;
-  @Input()
-  set isFavorite(val : boolean){
-    this.cardClass = val ? 'add-favorite':'bg-warning';
 
-  }
   @Output() selectEvent = new EventEmitter<string>();
 
   cardClass: string = '';
