@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 import { Person } from 'src/types';
 
 @Component({
@@ -9,12 +10,14 @@ import { Person } from 'src/types';
 export class ProfileInfoComponent implements OnInit {
   @Input() person! : Person;
 
-  @Output() selectEvent = new EventEmitter<string>();
+  @Input() selectFn : (personId : string) => void = () => {};
+  @Input() actionButtonFn: (personId : string) => void = () => {};
+  @Input() actionText! : string;
 
   cardClass: string = '';
 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -23,7 +26,13 @@ export class ProfileInfoComponent implements OnInit {
   //   this.isFavorite = !this.isFavorite;
   // }
   isClicked(): void{
-    this.selectEvent.emit(this.person.name);
+    // this.selectEvent.emit(this.person.name);
+    // this.router.navigateByUrl(`/friends/${this.person.id}`);
+    this.selectFn(this.person.id);
+  }
+  buttonClicked() : void{
+    this.actionButtonFn(this.person.id);
+
   }
 
 }

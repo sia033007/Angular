@@ -1,6 +1,8 @@
 <div class="text-center" *ngFor="let person of people">
     <app-profile-info
     [person]="person"
-    (selectEvent)="onClickPerson($event)"
+    [selectFn]="onClickPerson"
+    [actionButtonFn]="buttonClicked"
+    [actionText]="actionButtonText"
     ></app-profile-info>
   </div>

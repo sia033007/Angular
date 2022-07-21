@@ -7,6 +7,12 @@ import { ProfileInfoComponent } from './profile-info/profile-info.component';
 import { PersonCardComponent } from './person-card/person-card.component';
 import { WelcomeMessageComponent } from './welcome-message/welcome-message.component';
 import { PeopleListComponent } from './people-list/people-list.component';
+import { RouteModule } from './route.module';
+import { UserProfilePageComponent } from './user-profile-page/user-profile-page.component';
+import { FriendsPageComponent } from './friends-page/friends-page.component';
+import { FriendDetailPageComponent } from './friend-detail-page/friend-detail-page.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +20,16 @@ import { PeopleListComponent } from './people-list/people-list.component';
     ProfileInfoComponent,
     PersonCardComponent,
     WelcomeMessageComponent,
-    PeopleListComponent
+    PeopleListComponent,
+    FriendsPageComponent,
+    FriendDetailPageComponent,
+    NavbarComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

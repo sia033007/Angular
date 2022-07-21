@@ -9,12 +9,14 @@ import { Person } from 'src/types';
 export class PeopleListComponent implements OnInit {
  @Input() people: Person[] = [];
  @Output() personClicked = new EventEmitter<string>();
+ @Input() buttonClicked: (personId : string) => void = () => {};
+ @Input() actionButtonText! : string;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-  onClickPerson(personId : string): void{
+  onClickPerson = (personId : string) => {
     this.personClicked.emit(personId);
   }
 

@@ -1,0 +1,14 @@
+<div class="container">
+    <p>You currently have {{ favoritesIds.length }} favorites</p>
+    <app-welcome-message [name]="person[0].name"></app-welcome-message>
+    <div class="row w-100 justify-content-center align-items-center ms-4 container">
+     
+        <h2>Favorites</h2> <p>Number of Favorites : {{ favorites.length }}</p>
+        <app-people-list (personClicked)="gotoFriendDetailPage($event)" [people]="favorites"
+        [buttonClicked]="removeFavorite"
+        actionButtonText="Remove from favorite"></app-people-list> <br>
+  <h2>Friends</h2> <p>Number of nonFavorites : {{ nonFavorites.length }}</p>
+  <app-people-list (personClicked)="gotoFriendDetailPage($event)" [people]="nonFavorites"
+  [buttonClicked]="addFavorite"
+  actionButtonText="Add to favorite"></app-people-list>
+    </div>

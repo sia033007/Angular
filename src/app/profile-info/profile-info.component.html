@@ -13,7 +13,10 @@
       </div>
 
     </div>
-    <div class="card-footer bg-secondary">
+    <div class="card-footer">
+      <button
+      (click)="buttonClicked()" class="btn btn-dark btn-block text-light"
+      [innerText]="actionText"></button>
     </div>
 
   </div>
